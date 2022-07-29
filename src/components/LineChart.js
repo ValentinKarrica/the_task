@@ -5,10 +5,7 @@ import { useEffect, useRef } from "react";
 const Container = styled.div`
   flex: 1;
 `;
-// interface Props {
-//   data: Array<any>;
-//   color: any;
-// }
+
 
 function LineChart({ chartData }) {
   const data = chartData;
@@ -21,7 +18,6 @@ function LineChart({ chartData }) {
   }, [data]);
 
   const draw = () => {
-    // Remove the existing svg
     d3.select(ref.current).select("svg").remove();
 
     const svg = d3
